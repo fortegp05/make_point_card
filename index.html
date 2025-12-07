@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オリジナルポイントカード作成</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>オリジナルポイントカード作成</h1>
+
+        <div class="content-wrapper">
+            <div class="form-section">
+            <h2>カード情報を入力</h2>
+
+            <div class="form-group">
+                <label for="shopName">店舗名:</label>
+                <input type="text" id="shopName" placeholder="例: カフェ＆レストラン ○○" value="カフェ＆レストラン">
+            </div>
+
+            <div class="form-group">
+                <label for="cardTitle">カードタイトル:</label>
+                <input type="text" id="cardTitle" placeholder="例: ポイントカード" value="ポイントカード">
+            </div>
+
+            <div class="form-group">
+                <label for="pointCount">ポイント数:</label>
+                <select id="pointCount">
+                    <option value="5">5個</option>
+                    <option value="10" selected>10個</option>
+                    <option value="15">15個</option>
+                    <option value="20">20個</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="benefit">特典内容:</label>
+                <input type="text" id="benefit" placeholder="例: 10個たまったら1杯無料！" value="10個たまったら1杯無料！">
+            </div>
+
+            <div class="form-group">
+                <label for="backgroundColor">背景色:</label>
+                <input type="color" id="backgroundColor" value="#fff8e1">
+            </div>
+
+            <div class="form-group">
+                <label for="backgroundImage">背景画像:</label>
+                <input type="file" id="backgroundImage" accept="image/*">
+                <button type="button" id="clearImageBtn" class="btn-clear">画像をクリア</button>
+            </div>
+
+            <div class="form-group">
+                <label for="accentColor">アクセントカラー:</label>
+                <input type="color" id="accentColor" value="#ff6b6b">
+            </div>
+
+            <div class="form-group">
+                <label for="createdBy">作成者名:</label>
+                <input type="text" id="createdBy" placeholder="例: Your Name" value="">
+            </div>
+
+            <button id="generateBtn" class="btn-primary">カードを生成</button>
+        </div>
+
+            <div class="preview-section">
+                <h2>プレビュー</h2>
+                <canvas id="cardCanvas" width="800" height="500" style="display: none;"></canvas>
+                <img id="previewImage" src="" alt="ポイントカードプレビュー">
+                <p class="preview-note">画像を長押しで保存できます</p>
+                <button id="downloadBtn" class="btn-secondary">画像をダウンロード</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-credit">
+        <a href="https://fortegp05.net/" target="_blank" rel="noopener noreferrer">Made by FORTEgp05</a>
+    </div>
+
+    <footer class="page-footer">
+        <p>&copy; 2025 FORTEgp05</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
